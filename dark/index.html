@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Coulton Ventures — Cross-Sector Advisory & Investment</title>
+  <meta name="description" content="Coulton Ventures is a cross-sector advisory and investment platform accelerating early-stage growth across sports, technology, and consumer businesses." />
+  <meta name="theme-color" content="#0a0a0a" />
+  <meta name="author" content="Coulton Ventures" />
+  <link rel="canonical" href="https://coultonventures.makeacompany.ai/dark/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Coulton Ventures" />
+  <meta property="og:title" content="Coulton Ventures — Cross-Sector Advisory & Investment" />
+  <meta property="og:description" content="Where capital meets strategic momentum." />
+  <meta property="og:url" content="https://coultonventures.makeacompany.ai/dark/" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Coulton Ventures",
+    "url": "https://coultonventures.makeacompany.ai/",
+    "description": "Cross-sector advisory and investment platform accelerating early-stage growth across sports, technology, and consumer businesses.",
+    "email": "coultonventures@gmail.com",
+    "knowsAbout": ["Capital Formation", "Go-To-Market Strategy", "Strategic Partnerships", "Investor Engagement", "Revenue Development", "Sports", "Technology", "Consumer"]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --bg-soft: #111111;
+      --fg: #f5f5f5;
+      --fg-soft: #888888;
+      --fg-mute: #555555;
+      --rule: #1f1f1f;
+      --rule-strong: #2a2a2a;
+      --accent: #f5f5f5;
+    }
+
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Inter', system-ui, -apple-system, Segoe UI, sans-serif;
+      font-weight: 400;
+      color: var(--fg);
+      background: var(--bg);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      font-size: 15px;
+    }
+    h1, h2, h3, h4 { font-family: 'Inter', sans-serif; font-weight: 500; letter-spacing: -0.02em; margin: 0; color: var(--fg); }
+    h1 { font-size: clamp(2.2rem, 5.5vw, 4rem); line-height: 1.05; letter-spacing: -0.035em; font-weight: 500; }
+    h2 { font-size: clamp(1.5rem, 2.6vw, 2rem); line-height: 1.2; letter-spacing: -0.025em; font-weight: 500; }
+    h3 { font-size: 0.98rem; font-weight: 500; line-height: 1.4; letter-spacing: -0.005em; }
+    p { margin: 0; color: var(--fg-soft); }
+    a { color: var(--fg); text-decoration: none; transition: color 0.15s; }
+    a:hover { color: var(--fg-soft); }
+
+    .mono { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace; }
+
+    .container { max-width: 920px; margin: 0 auto; padding: 0 28px; }
+
+    /* Nav */
+    .nav {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(10, 10, 10, 0.78);
+      backdrop-filter: saturate(140%) blur(14px);
+      -webkit-backdrop-filter: saturate(140%) blur(14px);
+      border-bottom: 1px solid var(--rule);
+    }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 18px 0; }
+    .brand { display: flex; align-items: center; gap: 10px; font-size: 0.92rem; font-weight: 500; color: var(--fg); letter-spacing: -0.01em; }
+    .brand-mark { width: 22px; height: 22px; border: 1px solid var(--fg); display: grid; place-items: center; font-family: 'JetBrains Mono', monospace; font-weight: 500; font-size: 0.62rem; color: var(--fg); }
+    .nav-links { display: none; gap: 28px; font-size: 0.85rem; font-weight: 400; }
+    .nav-links a { color: var(--fg-soft); }
+    .nav-links a:hover { color: var(--fg); }
+    @media (min-width: 760px) { .nav-links { display: flex; } }
+
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 18px;
+      font: 500 0.85rem/1 'Inter', sans-serif;
+      letter-spacing: -0.005em;
+      border-radius: 0;
+      border: 1px solid var(--fg);
+      background: var(--fg);
+      color: var(--bg);
+      cursor: pointer;
+      transition: opacity 0.15s;
+    }
+    .btn:hover { opacity: 0.78; color: var(--bg); }
+    .btn-ghost { background: transparent; color: var(--fg); border-color: var(--rule-strong); }
+    .btn-ghost:hover { background: transparent; color: var(--fg); border-color: var(--fg-soft); opacity: 1; }
+
+    /* Eyebrow */
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem; font-weight: 400; letter-spacing: 0;
+      color: var(--fg-mute);
+      text-transform: lowercase;
+    }
+    .eyebrow::before { content: "//"; color: var(--fg-mute); }
+
+    /* Hero */
+    .hero { padding: 120px 0 100px; }
+    .hero .eyebrow { margin-bottom: 32px; }
+    .hero h1 { margin-bottom: 32px; max-width: 20ch; }
+    .hero-lede { max-width: 56ch; font-size: 1.02rem; color: var(--fg-soft); margin-bottom: 40px; line-height: 1.6; }
+    .hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; }
+
+    /* Sections */
+    section { padding: 80px 0; border-top: 1px solid var(--rule); }
+    .section-head { margin-bottom: 56px; }
+    .section-head .eyebrow { margin-bottom: 18px; }
+    .section-head p { font-size: 0.98rem; color: var(--fg-soft); margin-top: 18px; max-width: 56ch; }
+
+    /* Stats */
+    .stats { padding: 64px 0; }
+    .stats-grid { display: grid; grid-template-columns: 1fr; gap: 32px; }
+    @media (min-width: 720px) { .stats-grid { grid-template-columns: repeat(3, 1fr); gap: 28px; } }
+    .stat { padding: 0; }
+    .stat-num { font-family: 'Inter', sans-serif; font-size: clamp(2.2rem, 4vw, 2.8rem); font-weight: 400; color: var(--fg); line-height: 1; margin-bottom: 14px; letter-spacing: -0.04em; }
+    .stat-label { font-family: 'JetBrains Mono', monospace; font-size: 0.74rem; color: var(--fg-mute); letter-spacing: 0; text-transform: lowercase; }
+
+    /* Sectors */
+    .sectors { display: grid; grid-template-columns: 1fr; gap: 0; border-top: 1px solid var(--rule); }
+    @media (min-width: 720px) { .sectors { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1000px) { .sectors { grid-template-columns: repeat(4, 1fr); } }
+    .sector {
+      padding: 32px 24px 32px 0;
+      border-bottom: 1px solid var(--rule);
+      border-right: 1px solid var(--rule);
+      transition: background 0.15s;
+    }
+    @media (min-width: 720px) { .sector { padding: 32px 24px; } }
+    .sector:hover { background: var(--bg-soft); }
+    .sector-tag { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--fg-mute); margin-bottom: 14px; text-transform: lowercase; }
+    .sector h3 { margin-bottom: 10px; }
+    .sector p { color: var(--fg-soft); font-size: 0.9rem; line-height: 1.55; }
+
+    /* Services — clean list, no cards */
+    .services { display: flex; flex-direction: column; }
+    .service {
+      display: grid; grid-template-columns: 60px 1fr; gap: 28px;
+      padding: 28px 0;
+      border-top: 1px solid var(--rule);
+      transition: padding 0.2s;
+    }
+    .service:first-child { border-top: none; }
+    .service:hover { padding-left: 8px; }
+    .service-num { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; color: var(--fg-mute); padding-top: 4px; }
+    .service-body h3 { margin-bottom: 8px; font-size: 1.05rem; }
+    .service-body p { font-size: 0.94rem; max-width: 58ch; }
+
+    /* Portfolio — minimal list */
+    .portfolio { display: flex; flex-direction: column; }
+    .venture {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      padding: 32px 0;
+      border-top: 1px solid var(--rule);
+    }
+    @media (min-width: 720px) {
+      .venture { grid-template-columns: 200px 1fr 1fr; gap: 32px; align-items: start; }
+    }
+    .venture:first-child { border-top: none; }
+    .venture-meta { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--fg-mute); padding-top: 4px; text-transform: lowercase; }
+    .venture-body h3 { margin-bottom: 8px; font-size: 1.15rem; }
+    .venture-body p { font-size: 0.92rem; max-width: 50ch; }
+    .venture-metric { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: var(--fg); padding-top: 4px; }
+    .venture-metric small { display: block; color: var(--fg-mute); font-size: 0.72rem; margin-top: 4px; }
+
+    /* Contact */
+    .contact { padding: 100px 0; }
+    .contact h2 { max-width: 16ch; margin-bottom: 24px; }
+    .contact-lede { max-width: 48ch; color: var(--fg-soft); font-size: 1rem; margin-bottom: 36px; }
+    .contact-email { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 1rem; color: var(--fg); border-bottom: 1px solid var(--fg-mute); padding-bottom: 4px; }
+    .contact-email:hover { color: var(--fg); border-bottom-color: var(--fg); }
+
+    /* Footer */
+    footer { padding: 32px 0; border-top: 1px solid var(--rule); color: var(--fg-mute); font-size: 0.78rem; font-family: 'JetBrains Mono', monospace; }
+    .foot-inner { display: flex; flex-direction: column; gap: 12px; align-items: flex-start; }
+    @media (min-width: 680px) { .foot-inner { flex-direction: row; justify-content: space-between; align-items: center; } }
+    .foot-links { display: flex; gap: 20px; }
+    .foot-links a { color: var(--fg-mute); }
+    .foot-links a:hover { color: var(--fg-soft); }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; transition: none !important; }
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav" aria-label="Primary">
+    <div class="container nav-inner">
+      <a href="#" class="brand" aria-label="Coulton Ventures home">
+        <span class="brand-mark" aria-hidden="true">CV</span>
+        <span>Coulton Ventures</span>
+      </a>
+      <div class="nav-links" role="navigation">
+        <a href="#about">about</a>
+        <a href="#services">services</a>
+        <a href="#portfolio">portfolio</a>
+        <a href="#connect">connect</a>
+      </div>
+      <a href="#connect" class="btn">Work together</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container">
+      <span class="eyebrow">cross-sector advisory &amp; investment</span>
+      <h1>Where capital meets strategic momentum.</h1>
+      <p class="hero-lede">Coulton Ventures accelerates early-stage growth through hands-on advisory, investor engagement, and commercial execution across sports, technology, and consumer.</p>
+      <div class="hero-ctas">
+        <a href="#connect" class="btn">Engage us</a>
+        <a href="#portfolio" class="btn btn-ghost">View portfolio</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="stats" aria-label="Track record">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat">
+          <div class="stat-num">$200K</div>
+          <div class="stat-label">new revenue generated</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">$6M</div>
+          <div class="stat-label">investor interest soft-circled</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">$150K</div>
+          <div class="stat-label">qualified revenue pipeline</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">approach</span>
+        <h2>Built for founders who move fast.</h2>
+        <p>A cross-sector advisory and investment platform focused on early-stage growth, capital formation, and strategic partnerships. We don't just advise, we operate. Our work combines strategic counsel with hands-on operating roles, unlocking capital, partnerships, and revenue that compound over time.</p>
+      </div>
+      <div class="sectors">
+        <div class="sector">
+          <div class="sector-tag">sports</div>
+          <h3>Clubs, tech, commerce</h3>
+          <p>Professional clubs, sports tech, and fan commerce. We know the ecosystem and how to monetize it.</p>
+        </div>
+        <div class="sector">
+          <div class="sector-tag">technology</div>
+          <h3>AI &amp; SaaS</h3>
+          <p>AI-enabled platforms and SaaS ventures navigating GTM, fundraising, and early commercial traction.</p>
+        </div>
+        <div class="sector">
+          <div class="sector-tag">consumer</div>
+          <h3>Retail &amp; commerce</h3>
+          <p>Retail and commerce businesses scaling revenue through channel strategy and investor readiness.</p>
+        </div>
+        <div class="sector">
+          <div class="sector-tag">capital</div>
+          <h3>HNW network</h3>
+          <p>We connect founders with HNW investors and operators positioned to accelerate your trajectory.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">services</span>
+        <h2>Advisory that executes.</h2>
+        <p>We operate at the intersection of strategy and execution. Every engagement is built around measurable outcomes: pipeline, capital raised, partnerships closed, revenue generated.</p>
+      </div>
+      <div class="services">
+        <article class="service">
+          <div class="service-num">01</div>
+          <div class="service-body">
+            <h3>Go-to-market execution</h3>
+            <p>Develop and run GTM strategies that convert qualified pipeline into closed revenue. We build the playbooks and run the plays.</p>
+          </div>
+        </article>
+        <article class="service">
+          <div class="service-num">02</div>
+          <div class="service-body">
+            <h3>Capital formation</h3>
+            <p>Structured investor engagement from narrative development to outreach, soft-circles, and close. Built for early-stage rounds.</p>
+          </div>
+        </article>
+        <article class="service">
+          <div class="service-num">03</div>
+          <div class="service-body">
+            <h3>Strategic partnerships</h3>
+            <p>Identify, develop, and close commercial partnerships that create distribution, revenue, and long-term competitive advantage.</p>
+          </div>
+        </article>
+        <article class="service">
+          <div class="service-num">04</div>
+          <div class="service-body">
+            <h3>Investor engagement</h3>
+            <p>An active HNW investor and operator network. We facilitate introductions and manage relationships that move capital.</p>
+          </div>
+        </article>
+        <article class="service">
+          <div class="service-num">05</div>
+          <div class="service-body">
+            <h3>Revenue development</h3>
+            <p>From zero to pipeline. We identify commercial opportunities and build the infrastructure to capture them systematically.</p>
+          </div>
+        </article>
+        <article class="service">
+          <div class="service-num">06</div>
+          <div class="service-body">
+            <h3>Operating partnerships</h3>
+            <p>Embedded operating roles for ventures that need senior-level execution, not just advice. We build alongside your team.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">portfolio</span>
+        <h2>Ventures we're building with.</h2>
+      </div>
+      <div class="portfolio">
+        <article class="venture">
+          <div class="venture-meta">ai · technology</div>
+          <div class="venture-body">
+            <h3>Spiky.AI</h3>
+            <p>AI-powered coaching and performance analytics platform. Coulton Ventures leads GTM strategy, partnership development, and investor engagement to build scalable commercial traction.</p>
+          </div>
+          <div class="venture-metric">$150K<small>qualified revenue pipeline</small></div>
+        </article>
+        <article class="venture">
+          <div class="venture-meta">sports · professional</div>
+          <div class="venture-body">
+            <h3>Buffalo Pro Soccer</h3>
+            <p>Professional soccer initiative bringing top-tier football to Buffalo, NY. Coulton Ventures is driving capital formation and stakeholder engagement for a landmark launch.</p>
+          </div>
+          <div class="venture-metric">$6M<small>investor interest soft-circled</small></div>
+        </article>
+        <article class="venture">
+          <div class="venture-meta">consumer · commerce</div>
+          <div class="venture-body">
+            <h3>Curated Auctions</h3>
+            <p>Premium auction platform connecting collectors with rare and high-value items. Coulton Ventures drove revenue strategy, channel development, and commercial partnerships.</p>
+          </div>
+          <div class="venture-metric">$200K<small>in new revenue driven</small></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="connect" class="contact">
+    <div class="container">
+      <span class="eyebrow">connect</span>
+      <h2 style="margin-top:18px;">Ready to accelerate your growth?</h2>
+      <p class="contact-lede">Whether you're raising capital, building commercial channels, or seeking strategic partnership, we want to hear from you.</p>
+      <a href="mailto:coultonventures@gmail.com" class="contact-email">coultonventures@gmail.com</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container foot-inner">
+      <div>© 2026 Coulton Ventures</div>
+      <div class="foot-links">
+        <a href="#about">about</a>
+        <a href="#services">services</a>
+        <a href="#portfolio">portfolio</a>
+        <a href="#connect">connect</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
