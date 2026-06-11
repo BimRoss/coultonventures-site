@@ -1,27 +1,23 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Coulton Ventures — Cross-Sector Advisory & Investment</title>
-  <meta name="description" content="Coulton Ventures is a cross-sector advisory and investment platform accelerating early-stage growth across sports, technology, and consumer businesses. Capital formation, go-to-market execution, strategic partnerships." />
-  <meta name="theme-color" content="#0b1e3f" />
+  <meta name="description" content="Coulton Ventures is a cross-sector advisory and investment platform accelerating early-stage growth across sports, technology, and consumer businesses." />
+  <meta name="theme-color" content="#0a0a0a" />
   <meta name="author" content="Coulton Ventures" />
   <link rel="canonical" href="https://coultonventures.makeacompany.ai/" />
 
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Coulton Ventures" />
   <meta property="og:title" content="Coulton Ventures — Cross-Sector Advisory & Investment" />
-  <meta property="og:description" content="Where capital meets strategic momentum. Cross-sector advisory across sports, technology, and consumer." />
+  <meta property="og:description" content="Where capital meets strategic momentum." />
   <meta property="og:url" content="https://coultonventures.makeacompany.ai/" />
-  <meta property="og:image" content="https://coultonventures.makeacompany.ai/og.png" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Coulton Ventures — Cross-Sector Advisory & Investment" />
-  <meta name="twitter:description" content="Where capital meets strategic momentum." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" />
 
   <script type="application/ld+json">
   {
@@ -31,24 +27,47 @@
     "url": "https://coultonventures.makeacompany.ai/",
     "description": "Cross-sector advisory and investment platform accelerating early-stage growth across sports, technology, and consumer businesses.",
     "email": "coultonventures@gmail.com",
-    "sameAs": [],
+    "founder": {
+      "@type": "Person",
+      "name": "Steve Coulton",
+      "sameAs": "https://www.linkedin.com/in/steve-coulton-8427a6a"
+    },
     "knowsAbout": ["Capital Formation", "Go-To-Market Strategy", "Strategic Partnerships", "Investor Engagement", "Revenue Development", "Sports", "Technology", "Consumer"]
   }
   </script>
 
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('cv-theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
+
   <style>
-    :root {
-      --navy: #0b1e3f;
-      --navy-soft: #142a52;
-      --cream: #f6f2ea;
-      --cream-warm: #efe9dc;
-      --ink: #1a2236;
-      --ink-soft: #4a5468;
-      --brass: #b8924b;
-      --brass-soft: #d4b377;
-      --rule: rgba(11, 30, 63, 0.12);
-      --shadow: 0 1px 2px rgba(11, 30, 63, 0.04), 0 12px 32px rgba(11, 30, 63, 0.06);
+    :root,
+    [data-theme="dark"] {
+      --bg: #0a0a0a;
+      --bg-soft: #111111;
+      --fg: #f5f5f5;
+      --fg-soft: #888888;
+      --fg-mute: #555555;
+      --rule: #1f1f1f;
+      --rule-strong: #2a2a2a;
+      --meta-color: #0a0a0a;
     }
+    [data-theme="light"] {
+      --bg: #ffffff;
+      --bg-soft: #fafafa;
+      --fg: #0a0a0a;
+      --fg-soft: #6b6b6b;
+      --fg-mute: #9a9a9a;
+      --rule: #ececec;
+      --rule-strong: #d8d8d8;
+      --meta-color: #ffffff;
+    }
+    [data-theme="light"] meta[name="theme-color"] { /* noop, kept for parity */ }
 
     * { box-sizing: border-box; }
     html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
@@ -56,159 +75,217 @@
       margin: 0;
       font-family: 'Inter', system-ui, -apple-system, Segoe UI, sans-serif;
       font-weight: 400;
-      color: var(--ink);
-      background: var(--cream);
-      line-height: 1.55;
+      color: var(--fg);
+      background: var(--bg);
+      line-height: 1.6;
       -webkit-font-smoothing: antialiased;
       text-rendering: optimizeLegibility;
+      font-size: 15px;
+      transition: background 0.2s, color 0.2s;
     }
-    h1, h2, h3, h4 { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; letter-spacing: -0.01em; margin: 0; color: var(--navy); }
-    h1 { font-size: clamp(2.4rem, 6vw, 4.6rem); line-height: 1.05; letter-spacing: -0.02em; }
-    h2 { font-size: clamp(1.85rem, 3.8vw, 2.85rem); line-height: 1.15; }
-    h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); font-weight: 600; line-height: 1.3; }
-    p { margin: 0; }
-    a { color: var(--navy); text-decoration: none; }
-    a:hover { color: var(--brass); }
+    h1, h2, h3, h4 { font-family: 'Inter', sans-serif; font-weight: 500; letter-spacing: -0.02em; margin: 0; color: var(--fg); }
+    h1 { font-size: clamp(2.2rem, 5.5vw, 4rem); line-height: 1.05; letter-spacing: -0.035em; font-weight: 500; }
+    h2 { font-size: clamp(1.5rem, 2.6vw, 2rem); line-height: 1.2; letter-spacing: -0.025em; font-weight: 500; }
+    h3 { font-size: 0.98rem; font-weight: 500; line-height: 1.4; letter-spacing: -0.005em; }
+    p { margin: 0; color: var(--fg-soft); }
+    a { color: var(--fg); text-decoration: none; transition: color 0.15s; }
+    a:hover { color: var(--fg-soft); }
 
-    .container { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+    .mono { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace; }
+
+    .container { max-width: 920px; margin: 0 auto; padding: 0 28px; }
 
     /* Nav */
     .nav {
       position: sticky; top: 0; z-index: 50;
-      background: rgba(246, 242, 234, 0.85);
-      backdrop-filter: saturate(140%) blur(12px);
-      -webkit-backdrop-filter: saturate(140%) blur(12px);
+      background: color-mix(in srgb, var(--bg) 78%, transparent);
+      backdrop-filter: saturate(140%) blur(14px);
+      -webkit-backdrop-filter: saturate(140%) blur(14px);
       border-bottom: 1px solid var(--rule);
+      transition: background 0.2s, border-color 0.2s;
     }
-    .nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 18px 0; }
-    .brand { display: flex; align-items: center; gap: 12px; font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 600; color: var(--navy); }
-    .brand-mark { width: 30px; height: 30px; border: 1.5px solid var(--navy); display: grid; place-items: center; font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 0.95rem; color: var(--navy); }
-    .nav-links { display: none; gap: 32px; font-size: 0.92rem; font-weight: 500; }
-    .nav-links a { color: var(--ink-soft); transition: color 0.2s; }
-    .nav-links a:hover { color: var(--navy); }
-    .nav-cta { display: none; }
-    @media (min-width: 760px) {
-      .nav-links { display: flex; }
-      .nav-cta { display: inline-flex; }
-    }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 18px 0; gap: 16px; }
+    .brand { display: flex; align-items: center; gap: 10px; font-size: 0.92rem; font-weight: 500; color: var(--fg); letter-spacing: -0.01em; }
+    .brand-mark { width: 22px; height: 22px; border: 1px solid var(--fg); display: grid; place-items: center; font-family: 'JetBrains Mono', monospace; font-weight: 500; font-size: 0.62rem; color: var(--fg); }
+    .nav-links { display: none; gap: 28px; font-size: 0.85rem; font-weight: 400; }
+    .nav-links a { color: var(--fg-soft); }
+    .nav-links a:hover { color: var(--fg); }
+    .nav-actions { display: flex; align-items: center; gap: 10px; }
+    @media (min-width: 760px) { .nav-links { display: flex; } }
 
     .btn {
       display: inline-flex; align-items: center; gap: 8px;
-      padding: 13px 22px;
-      font: 500 0.92rem/1 'Inter', sans-serif;
-      letter-spacing: 0.01em;
-      border-radius: 2px;
-      border: 1px solid var(--navy);
-      background: var(--navy);
-      color: var(--cream);
+      padding: 10px 18px;
+      font: 500 0.85rem/1 'Inter', sans-serif;
+      letter-spacing: -0.005em;
+      border-radius: 0;
+      border: 1px solid var(--fg);
+      background: var(--fg);
+      color: var(--bg);
       cursor: pointer;
-      transition: all 0.2s ease;
+      transition: opacity 0.15s, background 0.2s, color 0.2s, border-color 0.2s;
     }
-    .btn:hover { background: var(--navy-soft); color: var(--cream); transform: translateY(-1px); box-shadow: var(--shadow); }
-    .btn-ghost { background: transparent; color: var(--navy); }
-    .btn-ghost:hover { background: var(--navy); color: var(--cream); }
+    .btn:hover { opacity: 0.78; color: var(--bg); }
+    .btn-ghost { background: transparent; color: var(--fg); border-color: var(--rule-strong); }
+    .btn-ghost:hover { background: transparent; color: var(--fg); border-color: var(--fg-soft); opacity: 1; }
+
+    .icon-btn {
+      width: 34px; height: 34px;
+      display: inline-grid; place-items: center;
+      background: transparent;
+      color: var(--fg-soft);
+      border: 1px solid var(--rule-strong);
+      border-radius: 0;
+      cursor: pointer;
+      transition: color 0.15s, border-color 0.15s, background 0.15s;
+    }
+    .icon-btn:hover { color: var(--fg); border-color: var(--fg-soft); }
+    .icon-btn svg { width: 15px; height: 15px; }
+
+    /* Theme icon swap */
+    [data-theme="dark"] .icon-sun { display: block; }
+    [data-theme="dark"] .icon-moon { display: none; }
+    [data-theme="light"] .icon-sun { display: none; }
+    [data-theme="light"] .icon-moon { display: block; }
+
+    /* Eyebrow */
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem; font-weight: 400; letter-spacing: 0;
+      color: var(--fg-mute);
+      text-transform: lowercase;
+    }
+    .eyebrow::before { content: "//"; color: var(--fg-mute); }
 
     /* Hero */
-    .hero { padding: 80px 0 100px; position: relative; overflow: hidden; }
-    .hero-eyebrow {
-      display: inline-flex; align-items: center; gap: 10px;
-      font-size: 0.78rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase;
-      color: var(--brass); margin-bottom: 28px;
-    }
-    .hero-eyebrow::before { content: ""; width: 32px; height: 1px; background: var(--brass); }
-    .hero h1 { margin-bottom: 28px; max-width: 18ch; }
-    .hero h1 em { font-style: italic; color: var(--brass); font-weight: 400; }
-    .hero-lede { max-width: 60ch; font-size: clamp(1.05rem, 1.6vw, 1.18rem); color: var(--ink-soft); margin-bottom: 40px; }
-    .hero-ctas { display: flex; flex-wrap: wrap; gap: 14px; }
-
-    /* Stats */
-    .stats { padding: 56px 0; background: var(--navy); color: var(--cream); }
-    .stats-grid { display: grid; grid-template-columns: 1fr; gap: 36px; }
-    @media (min-width: 720px) { .stats-grid { grid-template-columns: repeat(3, 1fr); gap: 24px; } }
-    .stat { padding: 0 8px; }
-    .stat-num { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.6rem, 5vw, 3.6rem); font-weight: 500; color: var(--brass-soft); line-height: 1; margin-bottom: 12px; }
-    .stat-label { font-size: 0.85rem; letter-spacing: 0.06em; color: rgba(246, 242, 234, 0.75); text-transform: uppercase; }
+    .hero { padding: 120px 0 100px; }
+    .hero .eyebrow { margin-bottom: 32px; }
+    .hero h1 { margin-bottom: 32px; max-width: 20ch; }
+    .hero-lede { max-width: 56ch; font-size: 1.02rem; color: var(--fg-soft); margin-bottom: 40px; line-height: 1.6; }
+    .hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 28px; }
+    .hero-meta { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; color: var(--fg-mute); display: inline-flex; align-items: center; gap: 8px; }
+    .hero-meta a { color: var(--fg-soft); border-bottom: 1px solid var(--rule-strong); padding-bottom: 1px; transition: color 0.15s, border-color 0.15s; }
+    .hero-meta a:hover { color: var(--fg); border-bottom-color: var(--fg-soft); }
+    .hero-meta .arrow { font-size: 0.7rem; }
 
     /* Sections */
-    section { padding: 100px 0; }
-    @media (max-width: 720px) { section { padding: 72px 0; } }
-    .section-eyebrow {
-      display: block; font-size: 0.78rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase;
-      color: var(--brass); margin-bottom: 18px;
-    }
-    .section-head { max-width: 720px; margin-bottom: 56px; }
-    .section-head p { font-size: 1.08rem; color: var(--ink-soft); margin-top: 20px; max-width: 60ch; }
+    section { padding: 80px 0; border-top: 1px solid var(--rule); transition: border-color 0.2s; }
+    .section-head { margin-bottom: 56px; }
+    .section-head .eyebrow { margin-bottom: 18px; }
+    .section-head p { font-size: 0.98rem; color: var(--fg-soft); margin-top: 18px; max-width: 56ch; }
 
-    /* About / sectors */
-    .sectors { display: grid; grid-template-columns: 1fr; gap: 16px; }
-    @media (min-width: 600px) { .sectors { grid-template-columns: repeat(2, 1fr); } }
-    @media (min-width: 960px) { .sectors { grid-template-columns: repeat(4, 1fr); } }
+    /* Stats */
+    .stats { padding: 64px 0; }
+    .stats-grid { display: grid; grid-template-columns: 1fr; gap: 32px; }
+    @media (min-width: 720px) { .stats-grid { grid-template-columns: repeat(3, 1fr); gap: 28px; } }
+    .stat { padding: 0; }
+    .stat-num { font-family: 'Inter', sans-serif; font-size: clamp(2.2rem, 4vw, 2.8rem); font-weight: 400; color: var(--fg); line-height: 1; margin-bottom: 14px; letter-spacing: -0.04em; }
+    .stat-label { font-family: 'JetBrains Mono', monospace; font-size: 0.74rem; color: var(--fg-mute); letter-spacing: 0; text-transform: lowercase; }
+
+    /* Sectors */
+    .sectors { display: grid; grid-template-columns: 1fr; gap: 0; border-top: 1px solid var(--rule); transition: border-color 0.2s; }
+    @media (min-width: 720px) { .sectors { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1000px) { .sectors { grid-template-columns: repeat(4, 1fr); } }
     .sector {
-      padding: 32px 26px;
-      background: #fff;
-      border: 1px solid var(--rule);
-      border-top: 2px solid var(--brass);
-      transition: transform 0.25s, box-shadow 0.25s;
+      padding: 32px 24px 32px 0;
+      border-bottom: 1px solid var(--rule);
+      border-right: 1px solid var(--rule);
+      transition: background 0.15s, border-color 0.2s;
     }
-    .sector:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
-    .sector-tag { font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--brass); margin-bottom: 16px; }
+    @media (min-width: 720px) { .sector { padding: 32px 24px; } }
+    .sector:hover { background: var(--bg-soft); }
+    .sector-tag { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--fg-mute); margin-bottom: 14px; text-transform: lowercase; }
     .sector h3 { margin-bottom: 10px; }
-    .sector p { color: var(--ink-soft); font-size: 0.96rem; }
+    .sector p { color: var(--fg-soft); font-size: 0.9rem; line-height: 1.55; }
+
+    /* Founder block (between about and services) */
+    .founder {
+      margin-top: 56px;
+      padding-top: 40px;
+      border-top: 1px solid var(--rule);
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+      transition: border-color 0.2s;
+    }
+    @media (min-width: 720px) {
+      .founder { grid-template-columns: 200px 1fr; gap: 32px; align-items: start; }
+    }
+    .founder-meta { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--fg-mute); padding-top: 4px; text-transform: lowercase; }
+    .founder-body h3 { font-size: 1.05rem; margin-bottom: 8px; }
+    .founder-body p { color: var(--fg-soft); font-size: 0.94rem; max-width: 56ch; margin-bottom: 14px; }
+    .founder-link {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.78rem;
+      color: var(--fg);
+      border-bottom: 1px solid var(--fg-mute);
+      padding-bottom: 2px;
+      transition: border-color 0.15s;
+    }
+    .founder-link:hover { border-bottom-color: var(--fg); color: var(--fg); }
 
     /* Services */
-    .services-bg { background: var(--cream-warm); }
-    .services { display: grid; grid-template-columns: 1fr; gap: 0; border: 1px solid var(--rule); background: #fff; }
-    @media (min-width: 720px) { .services { grid-template-columns: repeat(2, 1fr); } }
-    @media (min-width: 1000px) { .services { grid-template-columns: repeat(3, 1fr); } }
-    .service { padding: 40px 32px; border-bottom: 1px solid var(--rule); border-right: 1px solid var(--rule); position: relative; }
-    .service:hover { background: var(--cream); }
-    .service-num { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: var(--brass); letter-spacing: 0.05em; margin-bottom: 18px; }
-    .service h3 { margin-bottom: 14px; }
-    .service p { color: var(--ink-soft); font-size: 0.97rem; }
+    .services { display: flex; flex-direction: column; }
+    .service {
+      display: grid; grid-template-columns: 60px 1fr; gap: 28px;
+      padding: 28px 0;
+      border-top: 1px solid var(--rule);
+      transition: padding 0.2s, border-color 0.2s;
+    }
+    .service:first-child { border-top: none; }
+    .service:hover { padding-left: 8px; }
+    .service-num { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; color: var(--fg-mute); padding-top: 4px; }
+    .service-body h3 { margin-bottom: 8px; font-size: 1.05rem; }
+    .service-body p { font-size: 0.94rem; max-width: 58ch; }
 
     /* Portfolio */
-    .portfolio { display: grid; grid-template-columns: 1fr; gap: 28px; }
-    @media (min-width: 820px) { .portfolio { grid-template-columns: repeat(3, 1fr); } }
+    .portfolio { display: flex; flex-direction: column; }
     .venture {
-      background: #fff;
-      border: 1px solid var(--rule);
-      display: flex; flex-direction: column;
-      transition: transform 0.25s, box-shadow 0.25s;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      padding: 32px 0;
+      border-top: 1px solid var(--rule);
+      transition: border-color 0.2s;
     }
-    .venture:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
-    .venture-tag { padding: 22px 28px 0; font-size: 0.74rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--brass); }
-    .venture-body { padding: 14px 28px 28px; flex: 1; display: flex; flex-direction: column; }
-    .venture h3 { font-size: 1.6rem; margin-bottom: 14px; }
-    .venture p { color: var(--ink-soft); font-size: 0.95rem; margin-bottom: 24px; flex: 1; }
-    .venture-metric { padding-top: 20px; border-top: 1px solid var(--rule); font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; color: var(--navy); font-weight: 600; }
-    .venture-metric em { font-style: normal; color: var(--brass); }
+    @media (min-width: 720px) {
+      .venture { grid-template-columns: 200px 1fr 1fr; gap: 32px; align-items: start; }
+    }
+    .venture:first-child { border-top: none; }
+    .venture-meta { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--fg-mute); padding-top: 4px; text-transform: lowercase; }
+    .venture-body h3 { margin-bottom: 8px; font-size: 1.15rem; }
+    .venture-body p { font-size: 0.92rem; max-width: 50ch; }
+    .venture-metric { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: var(--fg); padding-top: 4px; }
+    .venture-metric small { display: block; color: var(--fg-mute); font-size: 0.72rem; margin-top: 4px; }
 
     /* Contact */
-    .contact { background: var(--navy); color: var(--cream); text-align: center; }
-    .contact h2 { color: var(--cream); }
-    .contact h2 em { font-style: italic; color: var(--brass-soft); font-weight: 400; }
-    .contact .section-eyebrow { color: var(--brass-soft); }
-    .contact-lede { max-width: 56ch; margin: 24px auto 36px; color: rgba(246, 242, 234, 0.78); font-size: 1.08rem; }
-    .contact-email { display: inline-block; font-family: 'Cormorant Garamond', serif; font-size: clamp(1.3rem, 2.6vw, 1.9rem); color: var(--cream); border-bottom: 1px solid var(--brass); padding-bottom: 4px; }
-    .contact-email:hover { color: var(--brass-soft); }
+    .contact { padding: 100px 0; }
+    .contact h2 { max-width: 16ch; margin-bottom: 24px; margin-top: 18px; }
+    .contact-lede { max-width: 48ch; color: var(--fg-soft); font-size: 1rem; margin-bottom: 36px; }
+    .contact-channels { display: flex; flex-direction: column; gap: 14px; }
+    @media (min-width: 600px) { .contact-channels { flex-direction: row; align-items: center; gap: 28px; flex-wrap: wrap; } }
+    .contact-channel {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1rem;
+      color: var(--fg);
+      border-bottom: 1px solid var(--fg-mute);
+      padding-bottom: 4px;
+      transition: border-color 0.15s, color 0.15s;
+    }
+    .contact-channel:hover { color: var(--fg); border-bottom-color: var(--fg); }
+    .contact-channel svg { width: 14px; height: 14px; opacity: 0.7; }
 
     /* Footer */
-    footer { padding: 40px 0; background: #08172f; color: rgba(246, 242, 234, 0.6); font-size: 0.86rem; }
-    .foot-inner { display: flex; flex-direction: column; gap: 16px; align-items: flex-start; }
+    footer { padding: 32px 0; border-top: 1px solid var(--rule); color: var(--fg-mute); font-size: 0.78rem; font-family: 'JetBrains Mono', monospace; transition: border-color 0.2s; }
+    .foot-inner { display: flex; flex-direction: column; gap: 14px; align-items: flex-start; }
     @media (min-width: 680px) { .foot-inner { flex-direction: row; justify-content: space-between; align-items: center; } }
-    .foot-links { display: flex; gap: 24px; }
-    .foot-links a { color: rgba(246, 242, 234, 0.6); }
-    .foot-links a:hover { color: var(--brass-soft); }
-
-    /* Subtle texture on hero */
-    .hero::before {
-      content: ""; position: absolute; inset: 0;
-      background:
-        radial-gradient(900px 380px at 85% -10%, rgba(184, 146, 75, 0.10), transparent 60%),
-        radial-gradient(700px 340px at -10% 110%, rgba(11, 30, 63, 0.05), transparent 60%);
-      pointer-events: none;
-    }
-    .hero > .container { position: relative; }
+    .foot-links { display: flex; gap: 20px; align-items: center; }
+    .foot-links a { color: var(--fg-mute); display: inline-flex; align-items: center; gap: 6px; }
+    .foot-links a:hover { color: var(--fg-soft); }
+    .foot-links svg { width: 13px; height: 13px; }
 
     @media (prefers-reduced-motion: reduce) {
       * { animation: none !important; transition: none !important; }
@@ -225,23 +302,36 @@
         <span>Coulton Ventures</span>
       </a>
       <div class="nav-links" role="navigation">
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#connect">Connect</a>
+        <a href="#about">about</a>
+        <a href="#services">services</a>
+        <a href="#portfolio">portfolio</a>
+        <a href="#connect">connect</a>
       </div>
-      <a href="#connect" class="btn nav-cta">Work Together</a>
+      <div class="nav-actions">
+        <a href="https://www.linkedin.com/in/steve-coulton-8427a6a" target="_blank" rel="noopener" class="icon-btn" aria-label="Steve Coulton on LinkedIn" title="Steve Coulton on LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.95v5.66H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zm1.78 13.02H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .78 0 1.74v20.51C0 23.21.79 24 1.77 24h20.45c.98 0 1.78-.79 1.78-1.75V1.74C24 .78 23.2 0 22.22 0z"/></svg>
+        </a>
+        <button type="button" class="icon-btn" id="theme-toggle" aria-label="Toggle light or dark theme" title="Toggle theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <a href="#connect" class="btn">Work together</a>
+      </div>
     </div>
   </nav>
 
   <header class="hero">
     <div class="container">
-      <span class="hero-eyebrow">Cross-Sector Advisory &amp; Investment</span>
-      <h1>Where capital meets <em>strategic momentum.</em></h1>
-      <p class="hero-lede">Coulton Ventures accelerates early-stage growth through hands-on advisory, investor engagement, and commercial execution across sports, technology, and consumer businesses.</p>
+      <span class="eyebrow">cross-sector advisory &amp; investment</span>
+      <h1>Where capital meets strategic momentum.</h1>
+      <p class="hero-lede">Coulton Ventures accelerates early-stage growth through hands-on advisory, investor engagement, and commercial execution across sports, technology, and consumer.</p>
       <div class="hero-ctas">
-        <a href="#connect" class="btn">Engage Us</a>
-        <a href="#portfolio" class="btn btn-ghost">View Portfolio</a>
+        <a href="#connect" class="btn">Engage us</a>
+        <a href="#portfolio" class="btn btn-ghost">View portfolio</a>
+      </div>
+      <div class="hero-meta">
+        led by
+        <a href="https://www.linkedin.com/in/steve-coulton-8427a6a" target="_blank" rel="noopener">Steve Coulton<span class="arrow"> ↗</span></a>
       </div>
     </div>
   </header>
@@ -251,15 +341,15 @@
       <div class="stats-grid">
         <div class="stat">
           <div class="stat-num">$200K</div>
-          <div class="stat-label">New Revenue Generated</div>
+          <div class="stat-label">new revenue generated</div>
         </div>
         <div class="stat">
           <div class="stat-num">$6M</div>
-          <div class="stat-label">Investor Interest Soft-Circled</div>
+          <div class="stat-label">investor interest soft-circled</div>
         </div>
         <div class="stat">
           <div class="stat-num">$150K</div>
-          <div class="stat-label">Qualified Revenue Pipeline</div>
+          <div class="stat-label">qualified revenue pipeline</div>
         </div>
       </div>
     </div>
@@ -268,72 +358,95 @@
   <section id="about">
     <div class="container">
       <div class="section-head">
-        <span class="section-eyebrow">Our Approach</span>
+        <span class="eyebrow">approach</span>
         <h2>Built for founders who move fast.</h2>
         <p>A cross-sector advisory and investment platform focused on early-stage growth, capital formation, and strategic partnerships. We don't just advise, we operate. Our work combines strategic counsel with hands-on operating roles, unlocking capital, partnerships, and revenue that compound over time.</p>
       </div>
       <div class="sectors">
         <div class="sector">
-          <div class="sector-tag">Sports</div>
-          <h3>Clubs, Tech, Commerce</h3>
+          <div class="sector-tag">sports</div>
+          <h3>Clubs, tech, commerce</h3>
           <p>Professional clubs, sports tech, and fan commerce. We know the ecosystem and how to monetize it.</p>
         </div>
         <div class="sector">
-          <div class="sector-tag">Technology</div>
+          <div class="sector-tag">technology</div>
           <h3>AI &amp; SaaS</h3>
           <p>AI-enabled platforms and SaaS ventures navigating GTM, fundraising, and early commercial traction.</p>
         </div>
         <div class="sector">
-          <div class="sector-tag">Consumer</div>
-          <h3>Retail &amp; Commerce</h3>
+          <div class="sector-tag">consumer</div>
+          <h3>Retail &amp; commerce</h3>
           <p>Retail and commerce businesses scaling revenue through channel strategy and investor readiness.</p>
         </div>
         <div class="sector">
-          <div class="sector-tag">Capital</div>
-          <h3>HNW Network</h3>
+          <div class="sector-tag">capital</div>
+          <h3>HNW network</h3>
           <p>We connect founders with HNW investors and operators positioned to accelerate your trajectory.</p>
+        </div>
+      </div>
+
+      <div class="founder">
+        <div class="founder-meta">founder &amp; principal</div>
+        <div class="founder-body">
+          <h3>Steve Coulton</h3>
+          <p>Operator, investor, and connector across sports, technology, and consumer. Steve leads engagements end-to-end, from narrative through close.</p>
+          <a href="https://www.linkedin.com/in/steve-coulton-8427a6a" target="_blank" rel="noopener" class="founder-link">
+            Connect on LinkedIn <span aria-hidden="true">↗</span>
+          </a>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="services" class="services-bg">
+  <section id="services">
     <div class="container">
       <div class="section-head">
-        <span class="section-eyebrow">What We Do</span>
+        <span class="eyebrow">services</span>
         <h2>Advisory that executes.</h2>
         <p>We operate at the intersection of strategy and execution. Every engagement is built around measurable outcomes: pipeline, capital raised, partnerships closed, revenue generated.</p>
       </div>
       <div class="services">
         <article class="service">
           <div class="service-num">01</div>
-          <h3>Go-To-Market Execution</h3>
-          <p>Develop and run GTM strategies that convert qualified pipeline into closed revenue. We build the playbooks and run the plays.</p>
+          <div class="service-body">
+            <h3>Go-to-market execution</h3>
+            <p>Develop and run GTM strategies that convert qualified pipeline into closed revenue. We build the playbooks and run the plays.</p>
+          </div>
         </article>
         <article class="service">
           <div class="service-num">02</div>
-          <h3>Capital Formation</h3>
-          <p>Structured investor engagement from narrative development to outreach, soft-circles, and close. Built for early-stage rounds.</p>
+          <div class="service-body">
+            <h3>Capital formation</h3>
+            <p>Structured investor engagement from narrative development to outreach, soft-circles, and close. Built for early-stage rounds.</p>
+          </div>
         </article>
         <article class="service">
           <div class="service-num">03</div>
-          <h3>Strategic Partnerships</h3>
-          <p>Identify, develop, and close commercial partnerships that create distribution, revenue, and long-term competitive advantage.</p>
+          <div class="service-body">
+            <h3>Strategic partnerships</h3>
+            <p>Identify, develop, and close commercial partnerships that create distribution, revenue, and long-term competitive advantage.</p>
+          </div>
         </article>
         <article class="service">
           <div class="service-num">04</div>
-          <h3>Investor Engagement</h3>
-          <p>An active HNW investor and operator network. We facilitate introductions and manage relationships that move capital.</p>
+          <div class="service-body">
+            <h3>Investor engagement</h3>
+            <p>An active HNW investor and operator network. We facilitate introductions and manage relationships that move capital.</p>
+          </div>
         </article>
         <article class="service">
           <div class="service-num">05</div>
-          <h3>Revenue Development</h3>
-          <p>From zero to pipeline. We identify commercial opportunities and build the infrastructure to capture them systematically.</p>
+          <div class="service-body">
+            <h3>Revenue development</h3>
+            <p>From zero to pipeline. We identify commercial opportunities and build the infrastructure to capture them systematically.</p>
+          </div>
         </article>
         <article class="service">
           <div class="service-num">06</div>
-          <h3>Operating Partnerships</h3>
-          <p>Embedded operating roles for ventures that need senior-level execution, not just advice. We build alongside your team.</p>
+          <div class="service-body">
+            <h3>Operating partnerships</h3>
+            <p>Embedded operating roles for ventures that need senior-level execution, not just advice. We build alongside your team.</p>
+          </div>
         </article>
       </div>
     </div>
@@ -342,33 +455,33 @@
   <section id="portfolio">
     <div class="container">
       <div class="section-head">
-        <span class="section-eyebrow">Current Portfolio</span>
+        <span class="eyebrow">portfolio</span>
         <h2>Ventures we're building with.</h2>
       </div>
       <div class="portfolio">
         <article class="venture">
-          <div class="venture-tag">AI · Technology</div>
+          <div class="venture-meta">ai · technology</div>
           <div class="venture-body">
             <h3>Spiky.AI</h3>
             <p>AI-powered coaching and performance analytics platform. Coulton Ventures leads GTM strategy, partnership development, and investor engagement to build scalable commercial traction.</p>
-            <div class="venture-metric"><em>$150K</em> qualified revenue pipeline</div>
           </div>
+          <div class="venture-metric">$150K<small>qualified revenue pipeline</small></div>
         </article>
         <article class="venture">
-          <div class="venture-tag">Sports · Professional</div>
+          <div class="venture-meta">sports · professional</div>
           <div class="venture-body">
             <h3>Buffalo Pro Soccer</h3>
             <p>Professional soccer initiative bringing top-tier football to Buffalo, NY. Coulton Ventures is driving capital formation and stakeholder engagement for a landmark launch.</p>
-            <div class="venture-metric"><em>$6M</em> investor interest soft-circled</div>
           </div>
+          <div class="venture-metric">$6M<small>investor interest soft-circled</small></div>
         </article>
         <article class="venture">
-          <div class="venture-tag">Consumer · Commerce</div>
+          <div class="venture-meta">consumer · commerce</div>
           <div class="venture-body">
             <h3>Curated Auctions</h3>
             <p>Premium auction platform connecting collectors with rare and high-value items. Coulton Ventures drove revenue strategy, channel development, and commercial partnerships.</p>
-            <div class="venture-metric"><em>$200K</em> in new revenue driven</div>
           </div>
+          <div class="venture-metric">$200K<small>in new revenue driven</small></div>
         </article>
       </div>
     </div>
@@ -376,24 +489,52 @@
 
   <section id="connect" class="contact">
     <div class="container">
-      <span class="section-eyebrow">Let's Build Together</span>
-      <h2>Ready to accelerate <em>your growth?</em></h2>
+      <span class="eyebrow">connect</span>
+      <h2>Ready to accelerate your growth?</h2>
       <p class="contact-lede">Whether you're raising capital, building commercial channels, or seeking strategic partnership, we want to hear from you.</p>
-      <a href="mailto:coultonventures@gmail.com" class="contact-email">coultonventures@gmail.com</a>
+      <div class="contact-channels">
+        <a href="mailto:coultonventures@gmail.com" class="contact-channel">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="1"/><path d="m2 6 10 7L22 6"/></svg>
+          coultonventures@gmail.com
+        </a>
+        <a href="https://www.linkedin.com/in/steve-coulton-8427a6a" target="_blank" rel="noopener" class="contact-channel">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.95v5.66H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zm1.78 13.02H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .78 0 1.74v20.51C0 23.21.79 24 1.77 24h20.45c.98 0 1.78-.79 1.78-1.75V1.74C24 .78 23.2 0 22.22 0z"/></svg>
+          linkedin.com/in/steve-coulton
+        </a>
+      </div>
     </div>
   </section>
 
   <footer>
     <div class="container foot-inner">
-      <div>© 2026 Coulton Ventures. All rights reserved.</div>
+      <div>© 2026 Coulton Ventures</div>
       <div class="foot-links">
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#connect">Connect</a>
+        <a href="#about">about</a>
+        <a href="#services">services</a>
+        <a href="#portfolio">portfolio</a>
+        <a href="#connect">connect</a>
+        <a href="https://www.linkedin.com/in/steve-coulton-8427a6a" target="_blank" rel="noopener" aria-label="Steve Coulton on LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.95v5.66H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zm1.78 13.02H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .78 0 1.74v20.51C0 23.21.79 24 1.77 24h20.45c.98 0 1.78-.79 1.78-1.75V1.74C24 .78 23.2 0 22.22 0z"/></svg>
+          linkedin
+        </a>
       </div>
     </div>
   </footer>
+
+  <script>
+    (function () {
+      var btn = document.getElementById('theme-toggle');
+      if (!btn) return;
+      btn.addEventListener('click', function () {
+        var cur = document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+        var next = cur === 'light' ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', next);
+        try { localStorage.setItem('cv-theme', next); } catch (e) {}
+        var meta = document.querySelector('meta[name="theme-color"]');
+        if (meta) meta.setAttribute('content', next === 'light' ? '#ffffff' : '#0a0a0a');
+      });
+    })();
+  </script>
 
 </body>
 </html>
